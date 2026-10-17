@@ -10,6 +10,96 @@
   line-height: 0.96;
 }
 
+.section-head h2,
+.bundle h2,
+.condition h2,
+.cta h2,
+.contact-head h2,
+.detail-copy h2 {
+  line-height: 0.96;
+}
+
+.product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.card-image:focus-visible {
+  outline: 4px solid var(--blue);
+  outline-offset: -4px;
+}
+
+.image-action {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  padding: 7px 10px;
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+.card-image:hover .image-action,
+.card-image:focus-visible .image-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-meta {
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-meta span:last-child {
+  white-space: nowrap;
+}
+
+.card-body h3 {
+  min-height: 0;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.card-copy {
+  flex: 1;
+}
+
+.card-bottom {
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.price,
+.details {
+  white-space: nowrap;
+}
+
 .zoom-button {
   position: relative;
   width: 100%;
@@ -145,12 +235,74 @@
 
 @media (max-width: 620px) {
   .hero h1 {
+    font-size: clamp(44px, 14vw, 54px);
+    line-height: 1.02;
+  }
+
+  .section-head h2,
+  .bundle h2,
+  .condition h2,
+  .cta h2,
+  .contact-head h2 {
+    font-size: clamp(40px, 12vw, 54px);
     line-height: 1;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-actions .button,
+  .hero-actions .text-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .hero-stats span {
+    line-height: 1.25;
+  }
+
+  .hero-tag {
+    right: 22px;
+    bottom: 24px;
+    left: 22px;
+  }
+
+  .hero-tag b {
+    font-size: 22px;
+    line-height: 1.1;
   }
 
   .card-copy {
     min-height: 0;
     font-size: 16px;
+  }
+
+  .image-action {
+    opacity: 1;
+    transform: none;
+  }
+
+  .card-bottom {
+    justify-content: space-between;
+  }
+
+  .detail-copy h2 {
+    font-size: clamp(38px, 13vw, 54px);
+    line-height: 1;
+  }
+
+  .product-channels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .direct-contact {
