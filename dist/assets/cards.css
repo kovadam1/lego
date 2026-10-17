@@ -5,3 +5,51 @@
   font-size: 20px;
   line-height: 1.55;
 }
+
+.direct-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px auto 22px;
+}
+
+.direct-contact a {
+  min-width: 240px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.direct-contact a:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.direct-contact span {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.direct-contact strong {
+  display: block;
+  font-size: 18px;
+}
+
+@media (max-width: 620px) {
+  .direct-contact {
+    display: grid;
+  }
+
+  .direct-contact a {
+    min-width: min(280px, 82vw);
+  }
+}
