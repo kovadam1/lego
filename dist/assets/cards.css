@@ -1,0 +1,7 @@
+.card-copy {
+  min-height: 61px;
+  margin: -6px 0 18px;
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.55;
+}
